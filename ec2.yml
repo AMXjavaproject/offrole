@@ -1,0 +1,10 @@
+AWSTemplateFormatVersion: 2010-09-09
+Resources: 
+  DevEC2Instance:
+    Type: 'AWS::EC2::Instance'
+    Properties: 
+      ImageId: 'ami-0b44050b2d893d5f7'
+      InstanceType: 't2.micro'
+      SecurityGroupIds: ['sg-0885bf3f2c904be90']
+      SubnetId: subnet-07cbb92121fbe49ed
+      KeyName: devops

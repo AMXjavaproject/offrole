@@ -1,0 +1,7 @@
+version: 0.2
+phases:
+  build:
+    run-as: ubuntu
+    commands:
+      - aws cloudformation create-stack --stack-name Myec2gourav --template-body file://ec2.yml
+      - aws cloudformation wait stack-create-complete --stack-name Myec2gourav
